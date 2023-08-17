@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbuck Landing Page</title>
+    <script src="https://kit.fontawesome.com/cb2f9d3842.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <header>
+            <a href="#" ><img src="logo.png" class="logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just a Coffee <br>It's <span>Starbucks</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Nostrum veritatis cupiditate asperiores earum recusandae vel
+                    sapiente molestiae autem iure. Doloremque velit rem ad. Earum, rem eveniet. 
+                    Laudantium illum aperiam debitis?
+                </p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="img1.png" class="starbucks"> <!--javascript function-->
+            </div>
+        </div>
+        <ul class="thumb"> <!--javascript function onclick event is used here-->
+            <li><img src="thumb1.png" onclick="imgSlider('img1.png')"></li>
+            <li><img src="thumb2.png" onclick="imgSlider('img2.png')"></li>
+            <li><img src="thumb3.png" onclick="imgSlider('img3.png')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+        </ul>
+    </section>
+    <footer>
+        <h1>Thank You. Visit Again.</h1>
+    </footer>
+    <!------javascript function------->
+    <script>
+        //if anything with class starbucks is cliked, then it performs this function
+        function imgSlider(anything){ 
+            document.querySelector('.starbucks').src = anything; // starbucks is under imgbox
+        }
+    </script>
+</body>
+</html>

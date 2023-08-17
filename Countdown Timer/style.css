@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-image: url("album.jpeg");
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: center;
+    background-size: contain;
+    margin: 0 ;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.countdown-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: right;
+    justify-content: center;
+    background-color: rgb(194, 194, 194) transparent;
+}
+h1{
+    font-size: 45px;
+}
+i{
+    color: purple;
+}
+.big-text{
+    font-size: 40px;
+    line-height: 1;
+    margin: 0 50px;
+    font-weight: 600;
+}
+.countdown{
+    text-align: center;
+}
+.countdown span{
+    font-size: 20px;
+    font-weight: 500;
+}

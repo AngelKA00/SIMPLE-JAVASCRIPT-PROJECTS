@@ -1,0 +1,35 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    height: 100vh;
+}
+h1{
+    font-size: 50px;
+}
+.container{
+    text-align: center;
+}
+.btn{
+    padding: 30px 50px;
+    margin: 10px;
+    font-size: 20px;
+    min-width: 200px;
+    min-height: 200px;
+    border-radius: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+    font-weight: 600;
+    background: url("images/crash.png");
+    background-size: cover;
+    text-transform: capitalize;
+
+}
+.btn:hover{
+    opacity: 0.8;
+}
+.btn:active{
+    background-size: 110%;
+}
