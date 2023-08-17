@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(135deg,rgb(226, 182, 244),rgb(38, 15, 49));
+}
+.heading h1{
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+    color: rgb(255, 255, 255);
+}
+.container{
+    width: 100%;
+    height: 100vh;
+   
+    /*to make it to center of web page*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.musicplayer{
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+nav .circle{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background: #fff;
+    color: purple;
+    box-shadow: 0 5px 10px;
+}
+.song-img{
+    width: 220px;
+    border-radius: 20px;
+    border:5px solid rgb(184, 117, 197);
+    box-shadow: 0 5px 30px;
+}
+.musicplayer h1{
+    font-size: 20px;
+    font-weight: bolder;
+    color: rgb(63, 1, 77);
+    margin-top: 20px;
+}
+.musicplayer p{
+    font-size: 18px;
+    
+    color: rgb(63, 1, 77);;
+    
+}
+#progress{
+    -webkit-appearance: none;/*to make the progress line invisible*/
+    width: 100%;
+    height: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 40px 0;
+    background-color: rgb(132, 26, 161);
+}
+/*to modify the round dot near progress bar*/
+#progress::-webkit-slider-thumb{
+    -webkit-appearance: none; /*default one will be hidden*/
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(132, 26, 161);
+    border:7px solid rgb(184, 117, 197);
+    box-shadow: 0 5px 60px;
+}
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.controls div{
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    /*icon inside div will be in center*/
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #fff;
+    color: purple;
+    box-shadow: 0 5px 10px;
+    cursor: pointer;
+}
+/*to increase play icon*/
+.controls div:nth-child(2){
+    transform: scale(1.5);
+    color: #fff;
+    background: purple;
+}

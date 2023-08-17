@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <title>Music Player</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/cb2f9d3842.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h2>My PlayList</h2>
+            <img id="track_image">
+            <p id="title">Song Title</p>
+            <p id="artist">Artist name</p>
+            <input type="range" id="duration_slider" onclick="change_duration()">
+            <button onclick="previous_song()" id="pre"><i class="fa-solid fa-backward-step"></i></button>
+            <button onclick="just_play()" id="play"><i class="fa-solid fa-play"></i></button>
+            <button onclick="next_song()" id="next"><i class="fa-solid fa-forward-step"></i></button>
+       </div>
+        <script src="script.js"></script>
+    </body>
+</html>

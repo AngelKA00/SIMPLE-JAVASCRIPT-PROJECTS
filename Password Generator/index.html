@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Password Generator</title>
+    </head>
+    <body>
+        <div class="heading">
+            <h1>Password Generator</h1>
+            <h2>Generate a password and get it copied !</h2>
+        </div>
+        <div class="container">
+            <h1>Generate a Random Password</h1>
+            <div class="display">
+                <input type="text" id="password" placeholder="Password coming soon !">
+                <img src="copy.png" onclick="copyPassword()">
+            </div>
+            <button onclick="createPassword()"> <img src="generate.png">Generate Password</button>
+        </div>
+        <script>
+            // variables for password generating
+            const passwordBox = document.getElementById("password");
+            const length = 12;
+            // variables for what kind of password can contain
+            const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            const lowerCase = "abcdefghijklmnopqrstuvwxyz";
+            const number = "0123456789";
+            const symbol = "!@#$%^&*()_+-={}[]|\/?:;<>,.`~";
+            const allChars = upperCase + lowerCase + number + symbol ;
+            // to generate random password
+            function createPassword(){
+                let password = "";
+                // random uppercase characters which we have given with given length, 
+                // will be added to password
+                // the same thing applies for all 3 below 
+                password += upperCase[Math.floor(Math.random() * upperCase.length)];
+                password += lowerCase[Math.floor(Math.random() * lowerCase.length)];
+                password += number[Math.floor(Math.random() * number.length)];
+                password += symbol[Math.floor(Math.random() * symbol.length)];
+                // the above 4 things will generate only password with 4 characters, since we have given only that much
+                // to make it easy, while loop has been used and also 1 variable has been created
+                while(length > password.length){
+                    password += allChars[Math.floor(Math.random() * allChars.length)];
+                }
+                // to pass the generated password into passwordBox
+                passwordBox.value = password; 
+            }
+            // to copy the generated password
+            function copyPassword(){
+                passwordBox.select(); // it will select the password
+                document.execCommand("copy"); // it will copy the password 
+            }
+//NOTE : execCommand() method is used for executing a command specified on the 
+//editable section that is being selected by the user
+        </script>
+    </body>
+</html>

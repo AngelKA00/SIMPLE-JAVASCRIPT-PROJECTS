@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <title>Music Player</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/cb2f9d3842.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="heading">
+            <h1>My Play List</h1>
+        </div>
+        
+        <div class="container">
+            <div class="musicplayer">
+                <!--upper side navigation icon-->
+                <nav>
+                    <div class="circle">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </div>
+                    <div class="circle">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </nav>
+                <!--song cover image-->
+                <img src="cover.jpg" class="song-img">
+                <h1>Dynamite</h1>
+                <p>BTS</p>
+                <!--adding audio
+                <audio controls id="song"> 
+                   <source src="Dynamite.m4a" type="audio/mpeg">
+                </audio>
+                -->
+                <!--controls from audio tag has been removed, so the default bar will not be diplayed-->
+                <audio id="song"> 
+                    <source src="Dynamite.m4a" type="audio/mpeg">
+                 </audio>
+                <!--adding range bar below default audio range-->
+                <input type="range" value="0" id="progress">
+                <!--add play icons-->
+                <div class="controls">
+                    <div><i class="fa-solid fa-backward"></i></div> 
+                    <div onclick="playPause()"><i class="fa-solid fa-play" id="ctrlIcon"></i></div>
+                    <div><i class="fa-solid fa-forward"></i></div> 
+                </div>
+
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
