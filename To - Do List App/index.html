@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width , initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <title>To-Do List App</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="heading">
+                <h1>To Do List Application</h1>
+                <h2>Write down all things which needs to be completed to keep tracking those items.</h2>
+            </div>
+            <div class="todo-app">
+                <h2>To-Do List <img src="icon.png"></h2>
+                <div class="row">
+                    <input type="text" id="input-box" placeholder="Type your to do items">
+                    <!--to perform operation when user clicks on add button-->
+                    <button onclick="addTask()">Add</button> 
+                </div>
+                <ul id="list-container">
+                    <!--<li class="checked">Task 1</li>
+                    <li>Task 2</li>
+                    <li>Task 3</li>-->
+                </ul>
+            </div>
+        </div>
+        <script>
+            //variables to get input by user and to add them into list container
+            const inputBox = document.getElementById("input-box");
+            const listContainer = document.getElementById("list-container");
+            //function to add the text to list them
+            function addTask(){
+                if(inputBox.value === ''){
+                    alert ("Add the works to be done to be more productive!");
+                }
+                else{
+                    let li = document.createElement("li"); //when user adds something it will get created
+                    li.innerHTML = inputBox.value; //the created task will be saved
+                    listContainer.appendChild(li); //to show the task in screen, which the user has entered
+                    
+                    let span = document.createElement("span");//to create 'x' symbol to delete the task added by user
+                    span.innerHTML = "\u00d7"; // symbol to add the cross 'x' sign
+                    li.appendChild(span); // to show it in screen
+                }
+                inputBox.value="";
+                saveData(); // to store each and every changes made in list container to be stored in browser
+            }
+            // to perform click operation
+            listContainer.addEventListener("click",function(e){
+                if(e.target.tagName == "LI"){ // if user clicks on task name
+                    e.target.classList.toggle("checked"); // it will become checked
+                    saveData(); //when list is added it will be updated
+                }
+                else if(e.target.tagName == "SPAN"){ // if user clicks on cross button
+                    e.target.parentElement.remove(); // task will get deleted
+                    saveData(); // when list is deleted it will be updated
+                }
+            } , false);
+            // to save the tasks list
+            function saveData(){
+                //whatever is there in list container it will be stored in our browser with the name of "data"
+                localStorage.setItem("data", listContainer.innerHTML);
+            }
+            // to show all lists 
+            function showTask(){
+                listContainer.innerHTML = localStorage.getItem("data");
+            }
+            showTask(); // to display all the tasks
+        </script>
+    </body>
+</html>

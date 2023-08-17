@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    min-height: 100vh;
+    margin: 0;
+}
+#container{
+    height: 500px;
+    width: 500px;
+    overflow: hidden;
+}
+img{
+    transform-origin: center;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}

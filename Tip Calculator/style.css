@@ -1,0 +1,77 @@
+body {
+	background: linear-gradient(145deg, rgb(201, 122, 201), rgb(86, 28, 86)) ;
+	font-family: "Raleway", sans-serif;
+}
+
+.container {
+	width: 350px;
+	height: 500px;
+	background-color: #fff;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	border-radius: 20px;
+    font-weight: bolder;
+}
+
+h1 {
+    
+	position: absolute;
+	left: 50%;
+	top: -60px;
+	width: 500px;
+	transform: translateX(-50%);
+	background-color: #290238;
+	color: #fff;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	font-size: 18px;
+	text-align: center;
+	padding: 9px;
+    text-decoration: none;
+    
+}
+
+.wrapper {
+	padding: 20px;
+    
+}
+
+input,select {
+	width: 80%;
+	border: none;
+	border-bottom: 1px solid #11011e;
+	padding: 10px;
+    font-weight: bolder;
+    
+}
+
+input:focus,
+select:focus {
+	
+	outline: none;
+}
+
+select {
+	width: 88% !important;
+}
+
+button {
+	margin: 20px auto;
+	width: 150px;
+	height: 50px;
+	background-color: #bc66de;
+	color: #fff;
+	font-size: 16px;
+	border: none;
+	border-radius: 5px;
+    font-weight: bolder;
+}
+
+.tip {
+	text-align: center;
+	font-size: 18px;
+	display: none;
+    
+}
